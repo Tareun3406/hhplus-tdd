@@ -115,7 +115,7 @@ class PointServiceUnitTest {
         // given
         val userId = 0L
         val chargeAmount = 1000L
-        val maximumPoint = 1_000_000L
+        val maximumPoint = PointService.MAX_POINTS
         val userPoint = UserPoint(userId, maximumPoint, System.currentTimeMillis())
         `when`(pointRepository.getPoint(userId)).thenReturn(userPoint)
 
